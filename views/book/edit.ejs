@@ -1,0 +1,23 @@
+<% include ../partials/header%>
+
+<h1> Edit <%=book.name%></h1>
+
+<form action="/books/<%=book._id%>?_method=PUT" method="post">
+    <label>Book name</label>
+    <input type="text" name="book[name]" value="<%=book.name%>">
+    <label>Author</label>
+    <input type="text" name="book[author]" value="<%=book.author%>">
+    <label>Genre</label>
+    <input type="text" name="book[genre]" value="<%=book.genre%>">
+    <label>Image URL</label>
+    <input type="text" name="book[image]" value="<%=book.image%>">
+    <label>Released Date</label>
+    <input type="date" name="book[released]" value="<%=book.released%>">
+    <label>Book review</label>
+    <textarea name="book[review]"><%-book.review%></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+<% include ../partials/footer%>
+

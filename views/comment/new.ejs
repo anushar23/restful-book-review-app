@@ -1,0 +1,32 @@
+<% include ../partials/header%>
+
+
+<div class="display-3 text-center pb-3"> Add a new comment to <%=book.name%></div>
+
+
+
+<div class="container mt-3 pb-2 shadow-lg p-3 mb-5 rounded">
+<form action="/books/<%=book._id%>/comments" method="post">
+
+    <div class="form-group col-md-4 ml-4">
+      <label for="inputState">Author</label>
+          <input id="inputState" class="form-control" type="text" name="comment[author]" placeholder="author">
+
+   
+    
+
+    <label for="inputAddress">Comment</label>
+              <input id="inputAddress" class="form-control" type="text" name="comment[text]" placeholder="text">
+
+        <!--<textarea name="comment[text]" class="form-control" id="inputAddress" rows="10" ></textarea> -->
+
+  </div>
+  
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+</div>
+
+<% include ../partials/footer%>
+

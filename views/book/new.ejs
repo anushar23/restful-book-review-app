@@ -1,0 +1,77 @@
+<% include ../partials/header%>
+
+
+<div class="display-4 text-center pb-3"> Add a new book review!</div>
+
+<!--<form action="/books" method="post">-->
+<!--     <label>Book name</label>-->
+<!--    <input type="text" name="book[name]" placeholder="name of book">-->
+<!--    <label>Author</label>-->
+<!--    <input type="text" name="book[author]" placeholder="name of author">-->
+<!--    <label>Genre</label>-->
+<!--    <input type="text" name="book[genre]" placeholder="genre">-->
+<!--     <label>Image URL</label>-->
+<!--    <input type="text" name="book[image]" placeholder="image URL">-->
+<!--    <label>Released Date</label>-->
+<!--    <input type="date" name="book[released]" placeholder="released year" >-->
+<!--    <label>Book review</label>-->
+<!--    <textarea name="book[review]"></textarea> -->
+
+<!--    <button type="submit">Submit</button>-->
+<!--</form>-->
+
+<div class="container mt-3 pb-2 shadow-lg p-3 mb-5 rounded">
+<form action="/books" method="post">
+  <div class="form-row">
+      
+    <div class="form-group col-md-4">
+      <label for="inputCity">Book Name</label>
+      <input type="text" class="form-control" id="inputCity" name="book[name]" placeholder="name of book">
+      <!--<input type="text" class="form-control" id="inputCity">-->
+    </div>
+    <div class="form-group col-md-4 ml-4">
+      <label for="inputState">Author</label>
+          <input id="inputState" class="form-control" type="text" name="book[author]" placeholder="name of author">
+
+      <!--<select id="inputState" class="form-control">-->
+      <!--  <option selected>Choose...</option>-->
+      <!--  <option>...</option>-->
+      <!--</select>-->
+    </div>
+    <div class="form-group col-md-2 ml-4">
+      <label for="inputZip">Genre</label>
+          <input type="text" class="form-control" id="inputZip" name="book[genre]" placeholder="genre">
+
+      <!--<input type="text" class="form-control" id="inputZip">-->
+    </div>
+  </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Image URL</label>
+          <input type="text" name="book[image]" class="form-control" id="inputEmail4" placeholder="image URL">
+
+      <!--<input type="email" class="form-control" id="inputEmail4" placeholder="Email">-->
+    </div>
+    <div class="form-group col-md-3 ml-5">
+      <label for="inputPassword4">Released date</label>
+          <input type="date" name="book[released]" class="form-control" id="inputPassword4" placeholder="released year" >
+
+      <!--<input type="password" class="form-control" id="inputPassword4" placeholder="Password">-->
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Review</label>
+        <textarea name="book[review]" class="form-control" id="inputAddress" rows="10" ></textarea> 
+
+    <!--<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">-->
+  </div>
+  
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
+</form>
+</div>
+
+<% include ../partials/footer%>
+

@@ -1,0 +1,31 @@
+<% include ../partials/header%>
+
+
+<div>
+        <h2><%=book.name%></h2>
+        <img src="<%=book.image%>">
+        <p><%=book.author%></p>
+        <p><%=book.genre%></p>
+        <p><%=book.released%></p>
+        <p><%=book.review%></p>
+        
+      
+
+        <p><a href="/books/<%=book._id%>/comments/new" class="btn">Add new comment</a></p>
+        
+
+        <a href="/books/<%=book.id%>/edit">Edit book review</a>
+        
+          <%book.comments.forEach(function(com){%>
+   <p> <strong><%=com.author%></strong> - <%=com.text%></p>
+
+<% })%>
+        
+
+        <form method="post" action="/books/<%=book._id%>?_method=DELETE">
+                
+        <button>Delete book review</button>
+        </form>
+ </div>
+ 
+ <% include ../partials/footer%>
